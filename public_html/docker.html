@@ -88,6 +88,12 @@
                             <li>CMD ( ): specifies what command to run in the container.</li>
                         </ul>
                         <p>All the text in the parenthesis can be different based on what you are using, it is important to read up on the<a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/"> best practices for writing Dockerfiles </a>to understand how to correctly execute a working Dockerfile. (NOTE: MAKE SURE THE DOCKERFILE DOES NOT HAVE A .TXT EXTENSION AS THIS WILL CAUSE ISSUES LATER)</p>
+                        <p>Using your terminal, and make sure that you are in the app directory with the Dockerfile. Now, you can build the container using the command: $ docker build -t getting-started . This command builds a new container image using the Dockerfile.</p>
+                        <p>Next, you can start your container using the docker run command and specify the name of the image created, for example: $ docker run -dp 3000:3000 getting-started</p>
+                        <p>Using this example, you can now open up a web browser and type in http://localhost:3000. This should show the application.</p>
+                        <p>You can use the command: $ docker ps, to get the ID of the container. Using this ID you will now be able to stop the container by using the command docker stop. The command is: $ docker stop <the-container-id></p>
+                        <p>When you are ready, you can also share this application on Docker Hub. To push the image, you need to create a repository on Docker Hub making sure that the visibility is public. Next you need to use the command: $ docker login -u YOUR-USER-NAME to login to Docker Hub. Next, use the docker tag command: $ docker tag getting-started YOUR-USER-NAME/YOUR-REPO-NAME. Lastly, you can push your repository to Docker Hub using the command: $ docker push YOUR-USER-NAME/YOUR-REPO-NAME.</p>
+                        
 
                     </div>
                 </div>
