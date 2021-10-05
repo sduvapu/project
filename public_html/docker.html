@@ -70,6 +70,13 @@
                             <li>Running applications using Docker Compose</li>
                         </ul>
                         <p class="lead">The first step to getting started with Docker is to download and install the current version of Docker on your computer. Before doing so, make sure that you are installing the correct Docker for your computer (apple chip/intel chip/windows).</p>
+                        <p class="lead">Once Docker is installed on your computer, open command prompt or terminal depending on what operating system you have. Next, we will start imputing commands to run docker.</p>
+                        <p class="lead">First run the command: $ docker run –d –p 80:80 docker/getting-started.</p>
+                        <ul>
+                            <li>The –d runs the container in the background which is called detached mode.
+                            <li>The –p 80:80 maps the port 80 of the host to port 80 of the container.
+                            <li>Lastly, docker/getting-started is the image that is being used.
+                        <p class="lead">After this, you can open your Docker Desktop and see the container that is running on your machine. The Docker Desktop is helpful to see container logs, getting shells inside the container, and efficiently manage containers. A container is another process that is running on your machine separate from the processes on host.</p>
                     </div>
                 </div>
             </div>
