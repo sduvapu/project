@@ -62,6 +62,14 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <p>During this section, you will learn how to upload your website to Azure cloud using Docker containers. We will be following the steps from <a href="https://docs.docker.com/cloud/aci-integration/">Docker Docs</a>.</p>
+                        <p>Building, running, and managing applications across multiple clouds is efficient with Azure Cloud using the frameworks of your choice.</p>
+                        <p>The first thing to do when getting started with Azure is to create an account. Next, using terminal, type in the command [$ docker login azure] to login to Azure. This will open your web browser and ask you to enter your login.</p>
+                        <p>After logging in, you must create a Docker context with ACI to deploy the containers. Creating this requires a subscription to Azure. You can execute this by using the command [$ docker context create aci <YOUR-CONTEXT-NAME>].</p>
+                        <p>To see the Docker contexts, you can use [$ docker context ls]. Now you can start to deploy your containers on ACI. Using the command [$ docker --context <YOUR-CONTEXT-NAME> run -p 80:80 nginx] run your container. Once this has been completed, you can use the docker context ls command once again and this will show you the port which the container is running. It may show something like 52.154.202.35:80->80/tcp, and using this you can view the Nginx page by saying http://52.154.202.35 in your web browser.</p>
+                        <p>To view logs from your container run the command: [$ docker logs <CONTAINER-ID>] To execute a command in a container that is running, use [$ docker exec -t <CONTAINER-ID> COMMAND]. And to stop and remove a container, the commands are [$ docker stop <CONTAINER-ID>] and [docker rm <CONTAINER-ID>] respectively.</p>
+                        <p>Deploying and managing multi-container applications are also important to know, which can be done using the docker compose command. First, ensure that you are using your ACI context. Then, you will be able to run a docker compose up and docker compose down command to start and stop the application.</p>
+                        
+                          
                     </div>
                 </div>
             </div>
