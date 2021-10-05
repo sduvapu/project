@@ -78,6 +78,17 @@
                             <li>Lastly, docker/getting-started is the image that is being used.
                         </ul>
                         <p class="lead">After this, you can open your Docker Desktop and see the container that is running on your machine. The Docker Desktop is helpful to see container logs, getting shells inside the container, and efficiently manage containers. A container is another process that is running on your machine separate from the processes on host.</p>
+                        <p class="lead">Before running the application, the application source code must be on your machine. Clone the repository that contains your application source code and use any code editor that you would like to open the project. To build the application, it is important to understand that a Dockerfile is needed. A Dockerfile is a script of instructions that is used to create the container image.</p>
+                        
+                        <p>Dockerfiles are typically set up using four layers that are stacked with the layers being:</p>
+                        <ul>
+                            <li>FROM (environment): creates a layer from the environment's Docker image.</li>
+                            <li>COPY (./app): adds the files from the current directory from the Docker client.</li>
+                            <li>RUN (make /app): builds your application.</li>
+                            <li>CMD ( ): specifies what command to run in the container.</li>
+                        </ul>
+                        <p>All the text in the parenthesis can be different based on what you are using, it is important to read up on the<a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">best practices for writing Dockerfiles</a>to understand the best practices to writing a Dockerfile. (NOTE: MAKE SURE THE DOCKERFILE DOES NOT HAVE A .TXT EXTENSION AS THIS WILL CAUSE ISSUES LATER)</p>
+
                     </div>
                 </div>
             </div>
