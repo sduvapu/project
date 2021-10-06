@@ -1,1 +1,1 @@
-https://sduvapu.github.io/project/public_html/index.html
+https://218submission.azurewebsites.net
